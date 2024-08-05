@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <div class="navbar flex justify-between items-center bg-gray-200 p-4 px-10 py-5">
+        <h1 class="text-4xl font-bold text-green-600">Title</h1>
+        <ul class="hidden lg:flex space-x-5">
+            <li><a href="#" class="text-black hover:underline">Home</a></li>
+            <li><a href="#" class="text-black hover:underline">About Us</a></li>
+            <li><a href="#" class="text-black hover:underline">Contact Us</a></li>
+            <li><a href="#" class="text-black hover:underline">Services</a></li>
+            <li><a href="#" class="text-black hover:underline">Blogs</a></li>
+        </ul>
+
+        <div class="lg:hidden">
+            <button class="bg-green-500 px-10 py-4 rounded-2xl" onclick="toggleNav() " id="menu">Menu</button>
+            <ul class="absolute hidden bg-gray-200 p-4 space-y-2" id="mobilenav">
+                <li><a href="#" class="text-black hover:underline">Home</a></li>
+                <li><a href="#" class="text-black hover:underline">About Us</a></li>
+                <li><a href="#" class="text-black hover:underline">Contact Us</a></li>
+                <li><a href="#" class="text-black hover:underline">Services</a></li>
+                <li><a href="#" class="text-black hover:underline">Blogs</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+         const toggleNav = () => {
+             const mobileNav = document.getElementById('mobilenav');
+             mobileNav.classList.toggle('hidden');
+         }
+
+      
+    </script>
+
+</body>
+</html>

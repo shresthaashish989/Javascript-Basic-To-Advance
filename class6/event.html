@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        events are action or occurance that takes place when user interact with web pages
+        <li>onclick</li>
+        <li>ondbclick</li>
+        <li>onsubmit</li>
+        <li>onchange</li>
+        <li>onkeyup</li>
+        <li>onkeydown</li>
+        <li>onmouseover</li>
+        <li>onmouseout</li>
+        <li>onmousemove</li>
+    </pre>
+
+
+
+    <button id="demo" onclick="demofunction()"  ondblclick="empty()">Click For Date</button>
+    <h1 id="heading" class="two" style="background-color: aqua;">i am ashish Shresths</h1>
+    <h2 class="two" style="background-color: red;"></h2>
+    <h3 class="two" style="background-color: blueviolet;"></h3>
+    <button onclick="testfunction()">check me</button>
+
+</body>
+
+<script>
+
+const demofunction=()=>{
+    // const date=new Date();
+    // document.write(date)
+
+    // document.querySelector(`#heading`).innerHTML =new Date()
+    document.getElementById(`heading`).style.backgroundColor='green'
+    document.getElementById(`heading`).style.color='white'
+}
+
+const empty=()=>{
+    document.querySelector('h1').innerHTML=''
+}
+
+const testfunction=()=>{
+    document.getElementsByClassName('two')[1].innerHTML="My name is ashish shrestha"
+
+}
+
+
+</script>
+</html>

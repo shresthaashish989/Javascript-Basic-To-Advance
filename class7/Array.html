@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        let p_language=['Java','python','javasscript','php']
+        document.write(`${p_language}<br>`)
+        document.write(`${p_language.length}<br>`)
+        p_language.push('pls')
+        document.write(`${p_language}<br>`)
+        p_language.pop()
+        document.write(`${p_language}<br>`)
+        p_language.shift('abc')
+        document.write(`${p_language}<br>`)
+        p_language.unshift('love')
+        document.write(`${p_language}<br>`)
+        p_language.splice(2,0, 'Rust')
+        document.write(`${p_language}<br>`)
+        p_language.splice(2,3, 'Poem')
+        document.write(`${p_language}<br>`)
+        document.write(`${p_language.sort()}<br>`)
+        document.write(`${p_language.reverse()}<br>`)
+
+
+        let m=['hari','shyam','ram']
+        document.write(`${m.concat(p_language)}`)
+        
+       
+    </script>
+</body>
+</html>

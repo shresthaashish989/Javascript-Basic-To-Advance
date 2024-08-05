@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+        //return type functions
+
+        // const x=Number(prompt("enter the first number"))
+        // const y=Number(prompt("enter the second number"))
+        // const z=Number(prompt("enter the third number"))
+
+        // function subtract(a,b,c){
+        //     const sum=a+b+c;
+        //     const per=sum/300*100;
+        //     return per;
+        //     if(per>=80){
+        //         return(`the grade is with ${per}`)
+        //     }
+        //     else if(per>=60){
+        //         return(`the grade is with ${per}`)
+        //     }
+        //     else if(per>=40){
+        //         return(`the grade is with ${per}`)
+        //     }
+        //     else{
+        //         return(`the grade is fail ${per}`)
+        //     }
+
+        // }
+        // const grade=subtract(x,y,z)
+        // document.write(`${grade}`%)
+
+        const x = Number(prompt("Enter the first number"));
+const y = Number(prompt("Enter the second number"));
+const z = Number(prompt("Enter the third number"));
+
+const marks = (a, b, c) => {
+    const sum = a + b + c;
+    const percentage = (sum / 300) * 100;
+
+    if (percentage >= 80) {
+        return `The grade is A with ${percentage.toFixed(2)}%`;
+    } else if (percentage >= 60) {
+        return `The grade is B with ${percentage.toFixed(2)}%`;
+    } else if (percentage >= 40) {
+        return `The grade is C with ${percentage.toFixed(2)}%`;
+    } else {
+        return `The grade is Fail with ${percentage.toFixed(2)}%`;
+    }
+};
+
+const grade = marks(x, y, z);
+document.write(`${grade}`);
+
+    </script>
+</body>
+</html>
