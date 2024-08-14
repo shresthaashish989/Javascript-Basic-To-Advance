@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        const news = [
+            { 'title': 'hello', 'body': 'hello world' },
+            { 'title': 'welcome', 'body': 'welcome to ashish home' }
+        ];
+
+        const showNews = () => {
+            setTimeout(() => {
+                let result = "";
+                news.forEach(item => {
+                    result += `<ul>
+                        <li>${item.title}</li>
+                        <li>${item.body}</li>
+                        </ul>`;
+                });
+
+                document.querySelector('div').innerHTML = result;
+            }, 2000);
+        };
+
+        const addNews=newdata=>{
+            return new Promise((resolve,reject)=>{
+                news.push(newdata)
+                const error=false
+                if(!error){
+                    resolve()
+                }
+                else{
+                    reject('something went wrong')
+                }
+            },2000)
+        }
+
+  
+
+        addNews({ 'title': 'honda', 'body': 'japan' })
+        .then(showNews)
+        .caught(err=>console.log(err))
+        
+    </script>
+</body>
+</html>
