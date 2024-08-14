@@ -6,14 +6,22 @@
     <title>Document</title>
 </head>
 <body>
+    <div></div>
     <script>
         try{
-            const sum=parseInt(prompt("enter the number"))
+            const num=parseInt(prompt("enter the number"))
+            const num1=parseInt(prompt("enter the second number")) 
+
+            if(num1===0){
+                throw new Error("zero can not devide other number")
+            }
+            const num2=num/num1;
+            document.write(num2);
         }
-        catch(error){
-            document.write("please provide ")
+        catch(err){
+          document.querySelector('div').innerHTML=err.message
         }
-        document.write(`${sum}`)
+       
     </script>
 </body>
 </html>
